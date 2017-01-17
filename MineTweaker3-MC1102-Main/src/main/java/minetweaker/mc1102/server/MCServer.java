@@ -59,6 +59,8 @@ public class MCServer extends AbstractServer {
 	
 	@Override
 	public boolean isOp(IPlayer player) {
+		if (player == null)
+			return false;
 		if(player == ServerPlayer.INSTANCE)
 			return true;
 		
